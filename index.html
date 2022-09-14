@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="logo.ico">
+		<title>Informatica Cuppetelliana</title>
+
+		<style>
+			*
+			{
+				margin:0;
+				padding:0;
+				box-sizing: border-box;
+				font-family: Courier;
+			}
+
+			/* nav bar styling */
+			nav{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 2%;
+				background-color: #4535AA;
+				color: #fff;
+			}
+
+			#nav-options a {
+				text-decoration: none;
+				padding: 5px 10px;
+				color: #000;
+				background-color: #FFB643;
+				border-radius: 5px;
+			}
+
+			/*
+				Profile info
+			*/     
+			#personal
+			{
+				display: flex;
+				flex-direction: row;
+				padding:30px;
+				background-color: #000;
+			}
+
+			.user-info
+			{
+				flex:2;
+				padding:40px;
+				color: #eee;
+			}
+
+
+			.user-info p {
+				color: #FFB643;
+				font-size: 20px;
+			}
+
+			.user-pic{
+				flex:1;
+				padding:40px;
+			}
+
+			/*
+				Course Info -- Work Info
+			*/
+			#portfolio{
+				display: flex;
+				flex-direction: row;
+				width:100%;
+				text-align: center;
+				padding:5%;
+			}
+
+			.project-name {
+				margin-bottom: 20px;
+				font-size: 1.5em;
+			}
+
+			.project-detail{
+				margin:10px;
+				flex:1;
+				height:80%;
+			}
+
+			.project-info {
+				font-size: 0.85em;
+				margin-top: 20px;
+			}
+			.course-img:hover{
+				border: 6px outset #e0ebeb;
+			}
+			.work-img:hover{
+				border: 6px outset #e0ebeb;
+			}
+
+			/*
+				Contact Us
+			*/
+			.contact-us{
+				display: flex;
+				flex-direction: center;
+				justify-content: center;
+				width: 100%;
+				background-color: black;
+				padding: 30px;
+			}
+			.contact-fields{
+				margin: 10px;
+			}
+			input, textarea{
+				padding: 10px;
+				border-radius: 10px;
+			}
+			input[type="submit"]{
+				background-color: #FFB643;
+				border: 0;
+				border-radius: 10px;
+				padding: 10px;
+				cursor: pointer;
+			}
+	     
+			/* common styling */
+			.img-responsive {
+				width: 100%;
+				height: auto;
+			}
+
+			.section-heading {
+				text-align: center;
+				padding: 10px;
+				font-size:25px;
+				background-color: #Ed639E;
+				color: #FFF;
+			}
+
+			.img-circle {
+				border-radius: 50%;
+			}
+
+			@media (max-width: 650px) {
+				#personal
+				{
+					flex-direction: column;
+				}
+
+				#portfolio{
+					flex-direction:column;
+				}
+
+				nav{
+					flex-direction: column;
+				}
+
+				#nav-options a {
+					font-size: 0.75em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div id="nav-brand">
+				<h2>Chi sono?</h2>
+			</div>
+			<div id="nav-options">
+				<span><a href="#personal">About Me</a></span>
+				<span><a href="#course">My Course</a></span>
+				<span><a href="#work">My Work</a></span>
+				<span><a href="#contact">Contact Me</a></span>
+			</div>
+		</nav>
+
+		<!-- Profile info -->
+		<div id="personal">
+			<div class="user-info">
+				<h1>Andrea Ragucci</h1>
+				<p>Ciao visitatore. Io sono uno studente superiore per insegnare il linguaggio python e la parte web a tutti coloro che ne necessitano. L'obiettivo e farvi imparare il linguaggio per la Data Science e la parte web base per creare semplici siti web.</p>
+			</div>
+
+			<div class="user-pic">
+				<img src="logo.png" alt ="" class="img-responsive img-circle"/>
+			</div>
+		</div>
+		<!-- Course Info -->
+		<div class="section-heading" id="course">My Course</div>
+		<div id="portfolio">
+			<div class="project-detail">
+				<h2 class="project-name">Python</h2>
+				<div class="course-img"><a href=""><img src="python-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Corso senza costi alla ricerca della conoscenza del linguaggio base della Data Science</p>
+			</div>
+			<div class="project-detail">
+				<h2 class="project-name">Web Developer Junior</h2>
+				<div class="course-img"><a href=""><img src="web-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Conoscenza parte web come HTML CSS JS per la creazione di semplici siti web.</p>
+			</div>
+		</div>
+		<!-- Work Info -->
+		<div class="section-heading" id="work">My Work</div>
+		<div id="portfolio">
+			<div class="project-detail">
+				<h2 class="project-name">Analisi Dati Titanice</h2>
+				<div class="work-img"><a href="" target="_blank"><img src="titanic-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Analisi dettagliata sui dati rilevanti lo schianto del Titanic</p>
+			</div>
+			<div class="project-detail">
+				<h2 class="project-name">Analisi COVID-19</h2>
+				<div class="work-img"><a href="" target="_blank"><img src="covid-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Analisi sui contagi COVID-19</p>
+			</div>
+			<div class="project-detail">
+				<h2 class="project-name">Analisi Tumore al seno</h2>
+				<div class="work-img"><a href="" target="_blank"><img src="tumoreseno-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Analisi dettagliata sui dati rilevanti sui tumori al seno</p>
+			</div>
+		</div>
+		<div id="portfolio">
+			<div class="project-detail">
+				<h2 class="project-name">Il Sommo</h2>
+				<div class="work-img"><a href="https://ragucciandrea11.github.io/IlSommo/" target="_blank"><img src="sommo-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Sito web didattico basato su Dante Alighieri</p>
+			</div>
+			<div class="project-detail">
+				<h2 class="project-name">Il Verga</h2>
+				<div class="work-img"><a href="https://ragucciandrea11.github.io/IlVerga/" target="_blank"><img src="verga-image.jpg" class="img-responsive"/></a></div>
+				<p class="project-info">Sito web didattico basato su Giovanni Verga</p>
+			</div>
+			<div class="project-detail">
+				<h2 class="project-name">Python Web per la Data Science</h2>
+				<div class="work-img"><a href="" target="_blank"><img src="pyscript-image.png" class="img-responsive"/></a></div>
+				<p class="project-info">Editor Python per la Data Science</p>
+			</div>
+		</div>
+
+		<!-- Contact Us -->
+		<div class="section-heading" id="contact">Get in touch!</div>
+		<div class="contact-us">
+			<div class="contact-info">
+				<form>
+					<div class="contact-fields"><input type="email" name="email" id="email" placeholder="Inserisci la tua mail"/></div>
+					<div class="contact-fields"><textarea name="message" id="contenuto" placeholder="Inserisci il tuo messaggio" rows=5></textarea></div>
+					<div class="contact-fields"><input type="submit" name="submit" value="Invia"/></div></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
